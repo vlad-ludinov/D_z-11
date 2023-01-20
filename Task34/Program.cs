@@ -1,4 +1,2 @@
-﻿using static System.Console;
-
-Write("Введите размер массива: ");
-int size = int.Parse(ReadLine()!);
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
