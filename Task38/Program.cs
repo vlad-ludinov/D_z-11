@@ -6,8 +6,8 @@ string [] parametres = ReadLine().Split(",", StringSplitOptions.RemoveEmptyEntri
 double [] array = getArray(int.Parse(parametres[0]), Convert.ToDouble(parametres[1]), Convert.ToDouble(parametres[2]));
 printArray(array);
 Value V = countArray(array);
-WriteLine(V.min);
-WriteLine(V.max);
+WriteLine($"Минимальное значение: {V.min}");
+WriteLine($"Максимальное значение: {V.max}");
 WriteLine($"Разница между максимальным и минимальными числами: {V.max-V.min}");
 
 double [] getArray(int sz, double minVl, double maxVl)
@@ -17,7 +17,7 @@ double [] getArray(int sz, double minVl, double maxVl)
     double [] arr = new double [sz];
     for (int i = 0; i < sz; i++)
     {
-        arr[i] = ((rnd.NextDouble())+(minVl/delta))*delta;
+        arr[i] = Math.Round((((rnd.NextDouble())+(minVl/delta))*delta),2);
     }
     return arr;
 }
