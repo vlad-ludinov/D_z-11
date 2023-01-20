@@ -19,3 +19,16 @@ void printArray(int [] arr)
     }
     writeLine($"{arr[arr.Length-1]}]");
 }
+
+int countArray(int [] arr)
+{
+    sum = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i%2==1)
+        {
+            sum+=arr[i];
+        }
+    }
+    return sum;
+}
