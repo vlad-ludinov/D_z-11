@@ -3,7 +3,9 @@
 Write("Введите размер массива:");
 int size = int.Parse(ReadLine()!);
 
-
+int [] array = getArray(size);
+printArray(array);
+WriteLine($"Четных чисел в массиве: {countArray(array)}");
 
 int[] getArray(int  sz)
 {
