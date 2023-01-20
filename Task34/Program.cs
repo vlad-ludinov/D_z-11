@@ -38,5 +38,5 @@ void printArray(int [] arr)
     {
         Write($"{arr[i]}, ");
     }
-    WriteLine($"{arr[arr.Length]}]");
+    WriteLine($"{arr[arr.Length-1]}]");
 }
