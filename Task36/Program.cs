@@ -3,6 +3,9 @@
 Write("Введите размер, минимальное и максимальное значения массива через запятую: ");
 string [] parametres = ReadLine()!.Split(",", StringSplitOptions.RemoveEmptyEntries);
 
+int [] array = getArray(int.Parse(parametres[0]), int.Parse(parametres[1]), int.Parse(parametres[2]));
+printArray(array);
+WriteLine($"Сумма чисел на нечетных позициях = {countArray(array)}");
 
 int [] getArray(int sz, int minVl, int maxVl);
 {
