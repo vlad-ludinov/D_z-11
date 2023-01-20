@@ -14,3 +14,15 @@ int[] getArray(int  sz)
     return arr;
 }
 
+int countArray (int [] arr)
+{
+    int count = 0;
+    foreach (var a in arr)
+    {
+        if (a%2 == 0)
+        {
+            count+=1;
+        } 
+    }
+    return count;
+}
