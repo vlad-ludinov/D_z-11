@@ -10,3 +10,12 @@ int [] getArray(int sz, int minVl, int maxVl);
     }
     return arr;
 }
+void printArray(int [] arr)
+{
+    Write("[");
+    for (int i = 0; i < arr.Length-1; i++)
+    {
+        Write($"{arr[i]}, ");
+    }
+    writeLine($"{arr[arr.Length-1]}]");
+}
