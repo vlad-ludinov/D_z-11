@@ -3,6 +3,8 @@
 Write("Введите размер массива:");
 int size = int.Parse(ReadLine()!);
 
+
+
 int[] getArray(int  sz)
 {
     Random rnd = new Random();
@@ -25,4 +27,14 @@ int countArray (int [] arr)
         } 
     }
     return count;
+}
+
+void printArray(int [] arr)
+{
+    Write("Массив: [");
+    for (int i = 0; i < arr.Length-1; i++)
+    {
+        Write($"{arr[i]}, ");
+    }
+    WriteLine($"{arr[arr.Length]}]");
 }
