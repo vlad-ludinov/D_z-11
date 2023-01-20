@@ -7,16 +7,17 @@ int [] array = getArray(int.Parse(parametres[0]), int.Parse(parametres[1]), int.
 printArray(array);
 WriteLine($"Сумма чисел на нечетных позициях = {countArray(array)}");
 
-int [] getArray(int sz, int minVl, int maxVl);
+int [] getArray(int sz, int minVl, int maxVl)
 {
-    Random rnd = new Random ();
     int [] arr = new int [sz];
+    Random rnd = new Random();
     for (int i = 0; i < sz; i++)
     {
         arr[i] = rnd.Next(minVl, maxVl);
     }
     return arr;
 }
+
 void printArray(int [] arr)
 {
     Write("[");
@@ -24,12 +25,12 @@ void printArray(int [] arr)
     {
         Write($"{arr[i]}, ");
     }
-    writeLine($"{arr[arr.Length-1]}]");
+    WriteLine($"{arr[arr.Length-1]}]");
 }
 
 int countArray(int [] arr)
 {
-    sum = 0;
+    int sum = 0;
     for (int i = 0; i < arr.Length; i++)
     {
         if (i%2==1)
